@@ -1,0 +1,14 @@
+services:
+  debian-xfce:
+    build: .
+
+    container_name: debian_xfce
+
+    ports:
+      - "2137:2137"
+
+    # comment line 11 and 12 if share folder is not used
+    volumes:
+      - /home/$(echo $USER)/Docker/Ubuntu_With_Desktop/workdir:/home/workdir
+
+    restart: unless-stopped
