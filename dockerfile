@@ -2,13 +2,9 @@ FROM debian
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt update && \
-apt upgrade -y && \
-apt autoremove -y
-
-RUN apt install -y dbus dbus-x11
-
-RUN apt install -y \
+RUN apt update && apt upgrade -y && apt install -y \
+    dbus \
+    dbus-x11 \
     sudo \
     wget \
     curl \
@@ -22,7 +18,9 @@ RUN apt install -y \
     tigervnc-standalone-server \
     novnc \
     websockify \
-    lynx
+    lynx \
+    && apt autoremove -y \
+    && rm -rf /var/lib/apt/lists/*
     
 RUN useradd -m -s /bin/bash user && \
 echo "user:password2137" | chpasswd && \
