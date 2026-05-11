@@ -1,11 +1,24 @@
-# debian_with_xfce_docker_conatiner
-# if you want to create a shared folder use
-$ mkdir - /home/$(echo $USER)/Docker/Debian_With_Desktop/workdir
+# Debian with XFCE Docker Container
 
-# otherwise you shall comment a few lines in docker-compose which use it
+## Shared folder (optional)
 
-# start with:
-$ sudo docker compose up
+If you want to create a shared folder, run:
 
-# when setting up is finished use
+mkdir -p /home/$(echo $USER)/Docker/Debian_With_Desktop/workdir
+
+If you do not need a shared folder, you can comment out the relevant lines in the docker-compose.yml file.
+
+## Start the container
+
+sudo docker compose up
+
+## Access the desktop
+
+Once the setup is complete, open:
+
 http://localhost:2137/vnc.html
+
+## Notes
+
+- No browser or IDE is preinstalled.
+- Additional software can be installed by downloading it into the shared folder and installing it from inside the container.
