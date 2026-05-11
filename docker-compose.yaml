@@ -22,6 +22,4 @@ services:
     volumes:
       - /home/${USER}/Docker/Debian_With_Desktop/workdir:/home/workdir
 
-    restart: unless-stopped
-
-    restart: unless-stopped
+    restart: unless-stopped  
