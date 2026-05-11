@@ -4,13 +4,13 @@
 
 If you want to create a shared folder, run:
 
-mkdir -p ~/Docker/Debian_With_Desktop/workdir
+$ mkdir -p ~/Docker/Debian_With_Desktop/workdir
 
 If you do not need a shared folder, you can comment out the relevant lines in the docker-compose.yml file.
 
 ## Start the container
 
-sudo docker compose up
+$ sudo docker compose up
 
 ## Access the desktop
 
