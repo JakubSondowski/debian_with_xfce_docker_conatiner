@@ -7,7 +7,8 @@ services:
     ports:
       - "2137:2137"
 
-    # comment line 11 and 12 if share folder is not used
+    # comment line 12 and 13 if share folder is not used
+    # if it doesn't work, change ${USER} for your username
     volumes:
       - /home/${USER}/Docker/Debian_With_Desktop/workdir:/home/workdir
 
