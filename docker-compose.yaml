@@ -9,6 +9,6 @@ services:
 
     # comment line 11 and 12 if share folder is not used
     volumes:
-      - /home/$(echo $USER)/Docker/Ubuntu_With_Desktop/workdir:/home/workdir
+      - /home/$(echo $USER)/Docker/Debian_With_Desktop/workdir:/home/workdir
 
     restart: unless-stopped
