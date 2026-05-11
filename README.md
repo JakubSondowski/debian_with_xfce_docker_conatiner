@@ -22,3 +22,8 @@ http://localhost:2137/vnc.html
 
 - No browser or IDE is preinstalled.
 - Additional software can be installed by downloading it into the shared folder and installing it from inside the container.
+
+## Default user and password
+
+- Can be found in dockerfile
+
